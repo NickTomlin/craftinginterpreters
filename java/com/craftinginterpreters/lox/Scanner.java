@@ -86,12 +86,18 @@ class Scanner {
 //> slash
       case '/':
         if (match('/')) {
+          // TODO(chap-4)
+          // do something to handle `/* */`
+          if (peek() == '*') {}
           // A comment goes until the end of the line.
           while (peek() != '\n' && !isAtEnd()) advance();
         } else {
           addToken(SLASH);
         }
         break;
+
+
+
 //< slash
 //> whitespace
 
